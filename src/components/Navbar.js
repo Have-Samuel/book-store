@@ -10,11 +10,11 @@ export default function Navbar() {
     display: 'flex',
     gap: '1rem',
     listStyle: 'none',
-  }
+  };
   return (
     <nav style={navStyle}>
       <ul style={ulStyle}>
-        <li><NavLink to="/"></NavLink></li>
+        <li><NavLink to="/" /></li>
         <li><NavLink to="/categories">Category</NavLink></li>
       </ul>
     </nav>

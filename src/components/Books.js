@@ -7,17 +7,17 @@ export default function Books() {
     {
       id: 1,
       title: 'The Croods 1',
-      author: 'Have', 
+      author: 'Have',
     },
     {
       id: 1,
       title: 'The Croods 2',
-      author: 'Have', 
+      author: 'Have',
     },
   ];
   return (
     <div>
-      {books.map((book) =>(
+      {books.map((book) => (
         <Book key={book.id} title={book.title} author={book.author} />
       ))}
       <AddBook />

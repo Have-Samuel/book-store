@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function book({title, author}) {
+export default function book({ title, author }) {
   return (
     <div>
       <h3>{title}</h3>
