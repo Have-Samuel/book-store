@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <ul style={ulStyle}>
-        <li><NavLink to="/" /></li>
+        <li><NavLink to="/">Books </NavLink></li>
         <li><NavLink to="/categories">Category</NavLink></li>
       </ul>
     </nav>
