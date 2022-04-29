@@ -26,7 +26,7 @@
 
 - GitHub: [Have-Samuel](https://github.com/Have-Samuel)
 - Twitter: [@samhave1](https://twitter.com/@samhave1)
-- LinkedIn: [Have Samuel Kabreebe](https://linkedin.com/in/Have Samuel Kabreebe)
+- LinkedIn: [Have-Samuel](https://linkedin.com/in/Have Samuel Kabreebe)
 
 
 ## Show your support
