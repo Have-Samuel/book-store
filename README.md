@@ -30,3 +30,13 @@
 
 
 ## Show your support
+Give a ⭐️ if you like this project!
+
+## Inspiration & Acknowledgments
+
+The inspiration for this project came from my course curriculum at Microverse.
+The study of JavaScript, React, Webpack usage, and Library usage made this a perfect project for practice.
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
