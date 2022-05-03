@@ -4,8 +4,7 @@
 
 ## Built With
 
-- HTML
-- CSS
+- HTML &CSS
 - JavaScript
 - React
 
@@ -21,7 +20,6 @@
 4. [clone repository](https://github.com/Have-Samuel/Bookstore)(git clone "branch-link")
 5. Run "npm install" to install required packages
 6. run "npm start" to start the website on local server
-7. Enjoy 😎
 
 ## Author 👱‍♂️
 
