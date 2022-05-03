@@ -1,73 +1,74 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Book Store
 
-# Project Name
-
-> Description the project.
-
+<<<<<<< HEAD
+> This isBook Store project.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML &CSS
+- JavaScript
+- React
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Not yet]()
+=======
+> This is Book Store project.
 
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- React
+
+## Live Demo[Not yet]()
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+1. Open [dev branch](https://github.com/Have-Samuel/Bookstore)
+2. Open VSCode or terminal and navigate to the folder where you would like to clone the project.
+3. Type "pwd" to see your working directory.
+4. [clone repository](https://github.com/Have-Samuel/Bookstore)(git clone "branch-link")
+5. Run "npm install" to install required packages
+6. run "npm start" to start the website on local server
+<<<<<<< HEAD
 
+## Author 👱‍♂️
 
-To get a local copy up and running follow these simple example steps.
+👤 **Have Samuel**
 
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
+- GitHub: [@githubhandle](https://github.com/Have-Samuel)
+- Twitter: [@samhave1](https://twitter.com/@samhave1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/have-samuel-kabareebe-0404a312a/)
 
 ## Show your support
+=======
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
 
-Give a ⭐️ if you like this project!
+## Author
+
+<<<<<<< HEAD
+## Submit an issue
+
+[Issue page]()
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Microverse for amusing learning resources.
+- Microverse code reviewers.
+=======
+👤 **Have Samuel**
 
-## 📝 License
+- GitHub: [Have-Samuel](https://github.com/Have-Samuel)
+- Twitter: [@samhave1](https://twitter.com/@samhave1)
+- LinkedIn: [Have-Samuel](https://linkedin.com/in/Have-Samuel-Kabreebe)
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
 
-This project is [MIT](./MIT.md) licensed.
+
+<<<<<<< HEAD
+LICENCED UNDER [MIT License](LICENSE)
+=======
+## Show your support
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
