@@ -10,7 +10,11 @@ export default function Books() {
       author: 'Have',
     },
     {
+<<<<<<< HEAD
       id: 2,
+=======
+      id: 1,
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
       title: 'The Croods 2',
       author: 'Have',
     },

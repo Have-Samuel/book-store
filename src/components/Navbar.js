@@ -14,12 +14,17 @@ export default function Navbar() {
   return (
     <nav style={navStyle}>
       <ul style={ulStyle}>
+<<<<<<< HEAD
         <li>
           <NavLink to="/"></NavLink>
         </li>
         <li>
           <NavLink to="/categories">Category</NavLink>
         </li>
+=======
+        <li><NavLink to="/">Books </NavLink></li>
+        <li><NavLink to="/categories">Category</NavLink></li>
+>>>>>>> 33763f95d19cbf4c464dee3807c0828d7cb437bb
       </ul>
     </nav>
   );
