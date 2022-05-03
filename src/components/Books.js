@@ -10,7 +10,7 @@ export default function Books() {
       author: 'Have',
     },
     {
-      id: 1,
+      id: 2,
       title: 'The Croods 2',
       author: 'Have',
     },
