@@ -4,7 +4,9 @@ const ADD_BOOK = './books/ADD_BOOK';
 const REMOVE_BOOK = './books/REMOVE_BOOK';
 
 // set initial default state for the shelf
-const initialState = [];
+const initialState = {
+  books: [],
+};
 
 export const addBook = (newTitle, newAuthor) => {
   const newID = uuid();
@@ -22,7 +24,9 @@ export default (state = initialState, action) => {
       return { ...state, books: [...state.books, action.payload] };
     }
     case REMOVE_BOOK: {
-      const filteredBooks = state.filter((book) => book.id !== action.payload.id);
+      const filteredBooks = state.books.filter(
+        (book) => book.id !== action.payload,
+      );
       return { ...state, books: [...filteredBooks] };
     }
     default:
