@@ -1,6 +1,12 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../../redux/books/books';
 
-export default function book({ title, author }) {
+export default function book({ title, author, id }) {
+  const dispatch = useDispatch();
+  const handleRemoveBook = (event) => {
+    dispatch(removeBook(event.target.getAttribute('id')));
+  };
   return (
     <div>
       <h3>{title}</h3>
@@ -10,7 +16,9 @@ export default function book({ title, author }) {
         <li><a href="#temp">Remove</a></li>
         <li><a href="#temp">Edit</a></li>
       </ul>
-      <button type="submit">Remove this book</button>
+      <button type="submit" id={id} onClick={handleRemoveBook}>
+        Remove this book
+      </button>
     </div>
   );
 }
