@@ -21,7 +21,7 @@ export default function Books() {
   );
 }
 
-Book.PropTypes = {
+Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,

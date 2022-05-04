@@ -13,12 +13,12 @@ export default function book({ title, author, id }) {
       <small>{author}</small>
       <ul>
         <li><a href="#temp">Comment</a></li>
-        <li><a href="#temp">Remove</a></li>
+        <li><a href="#temp" id={id} onClick={handleRemoveBook}>Remove</a></li>
         <li><a href="#temp">Edit</a></li>
       </ul>
-      <button type="submit" id={id} onClick={handleRemoveBook}>
+      {/* <button type="submit" id={id} onClick={handleRemoveBook}>
         Remove this book
-      </button>
+      </button> */}
     </div>
   );
 }
