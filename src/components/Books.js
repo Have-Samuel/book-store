@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import Book from './sub-components/book';
 import AddBook from './sub-components/AddBook';
+// import { getBooksFromApi } from '../redux/books/books';
 
 export default function Books() {
   const books = useSelector((store) => store.bookshelf);
   return (
-    <div>
+    <div className="book">
       {books.books.map((book) => (
         <Book
           key={book.id}
