@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
   }
 };
 
-export const getBooks = async (dispatch) => {
+export const getBooks = () => async (dispatch) => {
   let books;
   try {
     books = await fetchBooks();
