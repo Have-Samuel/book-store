@@ -1,9 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import { fetchBooks, createBook, deleteBook } from './books-api';
 
-const appId = 'NXcpJ7tVwe6VklFiOYLn';
-const BooksUrl = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
-
 const ADD_BOOK = './books/ADD_BOOK';
 const DELETE_BOOK = './books/REMOVE_BOOK';
 const GET_BOOKS = './books/GET_BOOKS';
