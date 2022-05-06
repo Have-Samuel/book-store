@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
@@ -5,8 +6,9 @@ const BookForm = () => {
   const dispatch = useDispatch();
   return (
     <form action="submit">
+      <hr className="hr"></hr>
       <label htmlFor="title">
-        <h2>Title</h2>
+        <h2 className="addBook">Title</h2>
         <input type="text" name="title" id="title" placeholder="Add Title..." />
       </label>
       <label htmlFor="title">
@@ -14,6 +16,7 @@ const BookForm = () => {
         <input type="text" name="author" id="author" placeholder="Add Author..." />
       </label>
       <button
+        className="sbumit"
         onClick={(e) => {
           // prevents page reset
           e.preventDefault();

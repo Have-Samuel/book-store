@@ -14,7 +14,7 @@ function Book(props) {
         onClick={(e) => dispatch(removeBook(e.target.id))}
         type="button"
       >
-        Delete
+        Remove
       </button>
     </div>
   );
