@@ -1,17 +1,15 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uniqueID } from 'uuid';
 
-const appId = '7rDBw05bg8rr1uCOgCDM';
-const BooksURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
+const appID = 'Xhkn3lTXOrsLse679mJl';
+const allBooksURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books`;
 
-const ADD_BOOK = './books/ADD_BOOK';
-const GET_BOOKS = './books/GET_BOOKS';
-const REMOVE_BOOK = './books/REMOVE_BOOK';
-
-// set initial default state for the shelf
+const ADD_BOOK = 'bookstore/book/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/book/REMOVE_BOOK';
+const GET_BOOKS = 'bookstore/book/GET_BOOKS';
 
 export const fetchBooks = async () => {
   const response = await fetch(
-    BooksURL,
+    allBooksURL,
   );
   const data = await response.json();
   const books = [];
@@ -22,7 +20,7 @@ export const fetchBooks = async () => {
   return books;
 };
 
-export const getBooksFromApi = () => async (dispatch) => {
+export const getBooksFromAPI = () => async (dispatch) => {
   const books = await fetchBooks();
   dispatch({
     type: GET_BOOKS,
@@ -31,15 +29,17 @@ export const getBooksFromApi = () => async (dispatch) => {
 };
 
 export const addBook = (newTitle, newAuthor) => async (dispatch) => {
-  const newID = uuidv4();
+  // preps the new book object for the API
+  const newID = uniqueID();
   const bookForAPI = JSON.stringify({
     item_id: newID, title: newTitle, author: newAuthor, category: 'under Construction',
   });
-  await fetch(BooksURL, {
+  await fetch(allBooksURL, {
     method: 'POST',
     headers: { 'Content-type': 'application/json' },
     body: bookForAPI,
   });
+  // sends an object for storage to store
   dispatch({
     type: ADD_BOOK,
     payload: { id: newID, title: newTitle, author: newAuthor },
@@ -51,11 +51,10 @@ const initialState = {
 };
 
 export const removeBook = (id) => async (dispatch) => {
-  const apiRemoveURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books${id}`;
+  const apiRemoveURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appID}/books/${id}`;
   await fetch(apiRemoveURL, {
     method: 'DELETE',
     headers: { 'Content-type': 'application/json' },
-    body: JSON.stringify({ item_id: id }),
   });
   dispatch({
     type: REMOVE_BOOK,
