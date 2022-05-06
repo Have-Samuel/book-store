@@ -1,6 +1,5 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-// import logger from 'redux-logger';
 import { applyMiddleware } from 'redux';
 import Books from './books/books';
 import categories from './categories/categories';

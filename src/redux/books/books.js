@@ -1,44 +1,80 @@
 import { v4 as uuidv4 } from 'uuid';
-import { getBooksAPI, addBookAPI, removeBookAPI } from './books-api';
 
-const ADD_BOOK = 'NEW_BOOK_ADD';
-const REMOVE_BOOK = 'BOOK_REMOVED';
-const initialState = [];
+const appId = '7rDBw05bg8rr1uCOgCDM';
+const BooksURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`;
 
-export const getBooksFromServer = () => async (dispatch) => {
-  const data = await getBooksAPI();
-  const result = Object.entries(data).map((data) => {
-    let [, res] = data;
-    [res] = res;
-    [res.id] = data;
-    return (res);
+const ADD_BOOK = './books/ADD_BOOK';
+const GET_BOOKS = './books/GET_BOOKS';
+const REMOVE_BOOK = './books/REMOVE_BOOK';
+
+// set initial default state for the shelf
+
+export const fetchBooks = async () => {
+  const response = await fetch(
+    BooksURL,
+  );
+  const data = await response.json();
+  const books = [];
+  Object.entries(data).forEach((book) => {
+    const bookObj = Object.assign({ id: book[0] }, ...book[1]);
+    books.push(bookObj);
   });
-  dispatch(({ type: ADD_BOOK, payload: result }));
+  return books;
 };
 
-export const addBook = (title, author) => (dispatch) => {
-  const book = {
-    id: uuidv4(), title, author, category: 'not set',
-  };
-  addBookAPI(book).then(() => {
-    dispatch({ type: ADD_BOOK, payload: [book] });
+export const getBooksFromApi = () => async (dispatch) => {
+  const books = await fetchBooks();
+  dispatch({
+    type: GET_BOOKS,
+    payload: books,
   });
 };
-export const removeBook = (id) => (dispatch) => {
-  removeBookAPI(id).then(() => {
-    dispatch({ type: REMOVE_BOOK, payload: id });
+
+export const addBook = (newTitle, newAuthor) => async (dispatch) => {
+  const newID = uuidv4();
+  const bookForAPI = JSON.stringify({
+    item_id: newID, title: newTitle, author: newAuthor, category: 'under Construction',
+  });
+  await fetch(BooksURL, {
+    method: 'POST',
+    headers: { 'Content-type': 'application/json' },
+    body: bookForAPI,
+  });
+  dispatch({
+    type: ADD_BOOK,
+    payload: { id: newID, title: newTitle, author: newAuthor },
+  });
+};
+
+const initialState = {
+  books: [],
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  const apiRemoveURL = `https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books${id}`;
+  await fetch(apiRemoveURL, {
+    method: 'DELETE',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({ item_id: id }),
+  });
+  dispatch({
+    type: REMOVE_BOOK,
+    payload: id,
   });
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return [
-        ...state,
-        ...action.payload,
-      ];
-    case REMOVE_BOOK:
-      return state.filter((book) => (book.id !== action.payload ? book : false));
+    case ADD_BOOK: {
+      return { ...state, books: [...state.books, action.payload] };
+    }
+    case REMOVE_BOOK: {
+      const filteredBooks = state.books.filter((booke) => booke.id !== action.payload);
+      return { ...state, books: [...filteredBooks] };
+    }
+    case GET_BOOKS: {
+      return { ...state, books: [...action.payload] };
+    }
     default:
       return state;
   }

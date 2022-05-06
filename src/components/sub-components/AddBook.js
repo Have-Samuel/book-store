@@ -14,9 +14,9 @@ export default function AddBook() {
     <div id="add-book">
       <form onSubmit={handleNewBookSubmit}>
         <h2>Add Book</h2>
-        <input type="text" name="title" id="title" placeholder="Book Title" />
+        <input type="text" name="title" id="title" placeholder="Book Title" required />
         <p>Author</p>
-        <input type="text" name="author" id="author" placeholder="Book author" />
+        <input type="text" name="author" id="author" placeholder="Book author" required />
         <button type="submit">Add Book</button>
       </form>
     </div>
