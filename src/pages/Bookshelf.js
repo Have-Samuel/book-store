@@ -1,7 +1,6 @@
-/* eslint-disable import/extensions */
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Book from '../components/Book';
+import Book from '../components/Books';
 import BookForm from '../components/BookForm';
 import { getBooksFromAPI } from '../redux/books/books';
 
