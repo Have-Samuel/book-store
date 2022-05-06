@@ -9,10 +9,10 @@ const BookForm = () => {
       <span className="header">Add Book</span>
       <form action="submit">
         <label htmlFor="title">
-          <input type="text" name="title" id="title" placeholder="Add Title..." />
+          <input type="text" name="title" id="title" placeholder="Add Title..." required />
         </label>
         <label htmlFor="title">
-          <input type="text" name="author" id="author" placeholder="Add Author..." />
+          <input type="text" name="author" id="author" placeholder="Add Author..." required />
         </label>
         <button
           className="addBtn"

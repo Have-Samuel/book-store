@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
-import '../styles/Book.css';
+import '../styles/Books.css';
 
 // react-circular-progress-bar
 
@@ -42,7 +42,7 @@ function Book(props) {
             <div className="progress_inner" />
           </div>
           <div className="percentText">
-            <span className="percent">0%</span>
+            <span className="percent">78%</span>
             <span className="completed">completed</span>
           </div>
         </div>

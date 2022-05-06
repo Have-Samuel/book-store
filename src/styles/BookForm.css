@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@700&display=swap");
+
 :root {
   --very-light-pink: #c4c4c4;
   --white: #fff;
@@ -9,7 +11,7 @@
 .header {
   display: flex;
   margin: 1.5rem 6.25rem 0 6.26rem;
-  padding-top: 1.813rem;
+  padding-top: 5.813rem;
   font-family: Montserrat, sans-serif;
   font-size: 1.25rem;
   font-weight: bold;
@@ -30,7 +32,7 @@ input::placeholder {
 }
 
 input {
-  width: 20rem;
+  width: 18rem;
   height: 1.188rem;
   font-family: Montserrat, sans-serif;
   font-size: 1rem;
@@ -39,7 +41,7 @@ input {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.15px;
-  margin: 1.188rem 2.125rem 0 0;
+  margin: 0.188rem 2.125rem 3rem 0;
   padding: 0.813rem 5.688rem 0.813rem 1.063rem;
   border-radius: 4px;
   border: solid 1px var(--grey-border);

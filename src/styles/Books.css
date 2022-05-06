@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@700&display=swap");
+
 :root {
   --black-two: #121212;
   --cool-blue: #4386bf;
@@ -5,6 +7,7 @@
 }
 
 .book {
+  flex-direction: column;
   margin: 0 6.25rem 0.938rem 6.25rem;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   border-radius: 4px;
