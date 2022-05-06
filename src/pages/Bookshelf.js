@@ -14,17 +14,14 @@ const Bookshelf = () => {
 
   return (
     <>
-      <div className="bookContainer">
-        <ul className="ul-book">
-          {books.books.map((book) => (
-            <li className="bookitem" key={book.id}>
-              <p className="categogory">Action</p>
-              <Book id={book.id} title={book.title} author={book.author} />
-            </li>
-          ))}
-        </ul>
-        <BookForm />
-      </div>
+      <ul className="bookshelf">
+        {books.books.map((book) => (
+          <li className="book" key={book.id}>
+            <Book id={book.id} title={book.title} author={book.author} />
+          </li>
+        ))}
+      </ul>
+      <BookForm />
     </>
   );
 };
