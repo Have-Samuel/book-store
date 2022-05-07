@@ -18,10 +18,19 @@
 .container {
   display: flex;
   justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+  padding-top: 2.375rem;
+  margin: 0 auto 2.5rem;
 }
 
 .bookInfo {
-  max-width: 25rem;
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
 }

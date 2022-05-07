@@ -23,6 +23,20 @@
   border-top: 1.5px solid var(--grey-border);
 }
 
+.form {
+  padding-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 24% 24% 26% 20%;
+  gap: 2%;
+}
+
+.input {
+  padding: 0.813rem 1.063rem 0.813rem 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
 form {
   margin: 0 6.25rem;
 }
