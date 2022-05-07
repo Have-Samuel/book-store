@@ -23,9 +23,19 @@
   border-top: 1.5px solid var(--grey-border);
 }
 
-form {
-  margin: 0 6.25rem;
+.bookshelf {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 0.938rem;
+  padding-top: 2.375rem;
+  margin: 0 auto 2.5rem;
+  /* width: 85%; */
 }
+
+/* form {
+  margin: 0 6.25rem;
+} */
 
 input::placeholder {
   color: var(--very-light-pink);
