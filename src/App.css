@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab:wght@700&display=swap");
+
+:root {
+  --light-grey: #fafafa;
+}
+
 .body {
   margin: 20px;
+  background-color: var(--light-grey);
 }
