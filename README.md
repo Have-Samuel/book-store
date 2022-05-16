@@ -9,7 +9,8 @@
 - JavaScript
 - React
 
-## Live Demo[Not yet]()
+## Live Demo
+[Link](https://bookstore256.netlify.app/)
 
 ## Getting Started
 
